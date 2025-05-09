@@ -1,0 +1,3 @@
+[submodule "secondScreenUtil"]
+	path = secondScreenUtil
+	url = git@github.com:0x0015/secondScreenUtil.git
