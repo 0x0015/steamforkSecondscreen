@@ -1,4 +1,4 @@
 Remember to install:
-meson, ninja, cmake (normal repos)
+cmake, sway (normal repos)
 wayland-protocols (will have to grab file from arch repo here https://archlinux.org/packages/extra/any/wayland-protocols/ and install)
 
