@@ -21,4 +21,5 @@ mkdir build
 cp dwl/dwl build
 cp dwl/wlroots/build/libwlroots-0.19.so build
 cp secondScreenUtil/build/secondScreenUtil build
+cp files/dualscreenLaunch.sh build
 
