@@ -1,9 +1,27 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+#specific for flip ds
 
-#empty
+input * {
+	xkb_layout "us"
+	xkb_variant "dvorak"
+}
+
+
+set $topDisplay "eDP-1"
+set $bottomDisplay "eDP-2"
+set $topDisplay-touch "10248:4117:InputPlumber_Touchscreen"
+set $bottomDisplay-touch "1046:967:Goodix_Capacitive_TouchScreen"
+
+
+for_window {
+	[app_id="secondScreenUtil"] boarder none; shadows disable; fullscreen enable; move output to $bottomDisplay
+	[app_id="gamescope"] boarder none; shadows disable; fullscreen enable; max_render_time off; move output to $topDisplay
+}
+
+output $topDisplay mode 1080x1920 pos 0 0 transform 270
+output $bottomDisplay mode 640x960 pos 480 1080 transform 270
+
+input $topDisplay-touch map_to_output $topDisplay
+input $bottomDisplay-touch map_to_output $bottomDisplay
 
 exec ./dualscreenLaunch_postdwl.sh
+
